@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ github.repository_owner }}/homebridge:${{ github.ref_name }}
+          tags: ${{ github.repository_owner }}/dockerfile-homebridge:${{ github.ref_name }}
