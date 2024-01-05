@@ -1,6 +1,10 @@
 FROM homebridge/homebridge:2023-11-28
 
-RUN echo "Install Homebridge plugins..."
+RUN echo "Installing Homebridge..."
+
+RUN exec /init
+
+RUN echo "Installing Homebridge plugins..."
 
 RUN hb-service update-node 20.10.0 --allow-root &&
 
