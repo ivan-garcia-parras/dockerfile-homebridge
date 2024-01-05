@@ -8,3 +8,5 @@ RUN hb-service update-node 20.10.0 --allow-root && \
     npm install github:ivan-garcia-parras/homebridge-eufy-security#feature/v2.3.1 && \
     hb-service add homebridge-webos-tv@v2.4.3 && \
     hb-service add homebridge-z2m@v1.10.0
+
+RUN exec /init
