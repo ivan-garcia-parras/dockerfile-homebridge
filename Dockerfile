@@ -9,4 +9,4 @@ RUN hb-service update-node 20.10.0 --allow-root && \
     hb-service add homebridge-webos-tv@v2.4.3 && \
     hb-service add homebridge-z2m@v1.10.0
 
-RUN exec /init
+RUN exec /etc/s6-overlay/scripts/setup.sh
