@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 ENV USER=root
 ENV HOMEBRIDGE_APT_PACKAGE=1
-ENV UIX_CUSTOM_PLUGIN_PATH="/opt/nodejs/current/lib/node_modules"
+ENV UIX_CUSTOM_PLUGIN_PATH="/opt/homebridge/lib/node_modules"
 ENV PATH="/opt/homebridge/bin:$PATH"
 ENV HOME="/home/homebridge"
 ENV npm_config_prefix=/opt/homebridge
@@ -41,10 +41,10 @@ RUN mkdir -p /var/lib/homebridge && \
     npm install -g homebridge-z2m@v1.11.0-beta.6 && \
     npm install -g @vectronic/homebridge-script-switch@0.1.1
 
-RUN git clone https://github.com/ivan-garcia-parras/homebridge-eufy-legacy.git /opt/nodejs/current/lib/node_modules/homebridge-eufy-legacy && \
-    cd /opt/nodejs/current/lib/node_modules/homebridge-eufy-legacy && \
+RUN git clone https://github.com/ivan-garcia-parras/homebridge-eufy-legacy.git /opt/homebridge/lib/node_modules/homebridge-eufy-legacy && \
+    cd /opt/homebridge/lib/node_modules/homebridge-eufy-legacy && \
     npm install
 
-RUN git clone https://github.com/ivan-garcia-parras/homebridge-daikin-onecta.git /opt/nodejs/current/lib/node_modules/homebridge-daikin-onecta && \
-    cd /opt/nodejs/current/lib/node_modules/homebridge-daikin-onecta && \
+RUN git clone https://github.com/ivan-garcia-parras/homebridge-daikin-onecta.git /opt/homebridge/lib/node_modules/homebridge-daikin-onecta && \
+    cd /opt/homebridge/lib/node_modules/homebridge-daikin-onecta && \
     npm install
