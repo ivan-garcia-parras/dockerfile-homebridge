@@ -25,7 +25,7 @@ RUN set -x && \
 RUN curl --proto "=https" --tlsv1.2 -sSf -L https://github.com/homebridge/ffmpeg-for-homebridge/releases/download/v2.1.1/ffmpeg-alpine-x86_64.tar.gz -o ffmpeg-alpine-x86_64.tar.gz && \
     tar -xzf ffmpeg-alpine-x86_64.tar.gz -C / --no-same-owner
 
-ARG NODEJS_VERSION="v22.12.0"
+ARG NODEJS_VERSION="v21.6.1"
 RUN mkdir -p /opt/nodejs && \
     curl --proto "=https" --tlsv1.2 -sSf -L https://nodejs.org/dist/${NODEJS_VERSION}/node-${NODEJS_VERSION}-linux-x64.tar.gz -o node-${NODEJS_VERSION}-linux-x64.tar.gz && \
     tar -xzf node-${NODEJS_VERSION}-linux-x64.tar.gz -C /opt/nodejs/ && \
