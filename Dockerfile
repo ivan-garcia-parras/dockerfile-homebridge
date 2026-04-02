@@ -42,5 +42,5 @@ RUN mkdir -p /var/lib/homebridge && \
     npm install -g homebridge-webos-tv@v2.4.8 && \
     npm install -g homebridge-z2m@v1.11.0-beta.10 && \
     npm install -g @vectronic/homebridge-script-switch@0.2.0 && \
-    npm install -g @mp-consulting/homebridge-daikin-cloud@1.3.15 && \
-    npm install -g @homebridge-plugins/homebridge-eufy-security@4.5.1
+    npm install -g @mp-consulting/homebridge-daikin-cloud@1.3.18 && \
+    npm install -g @homebridge-plugins/homebridge-eufy-security@4.6.1
